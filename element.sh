@@ -17,5 +17,7 @@ else
 
   if [[ -z $ELEMENT_INFO ]]; then
     echo "I could not find that element in the database."
+  else
+    #TODO: the record is found, then get detailed element information
   fi
 fi
