@@ -16,5 +16,8 @@ else
   else
     # 2. get the info by its symbol OR its name
     ELEMENT_INFO=$($PSQL "SELECT * FROM elements WHERE symbol='$1' OR name='$1'")
+    if [[ -z $ELEMENT_INFO ]]; then
+      echo "I could not find that element in the database."
+    fi
   fi
 fi
